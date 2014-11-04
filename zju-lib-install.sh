@@ -1,4 +1,5 @@
-#! /usr/bin/bash
+#! /bin/bash 
+
 # Author: Tengfei Jiang 
 # This script is to compile the geo_sim_sdk
 # Due to the complex dependence, compiling geo_sim_sdk becomes a time-consuming thing, this script may save your time.
