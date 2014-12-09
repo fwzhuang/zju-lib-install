@@ -19,7 +19,9 @@ BUILD_TYPE=release
 
 mkdir $GEO_LIB_PATH
 cd $GEO_LIB_PATH
-svn co http://10.76.1.125:8080/svn/geo_sim_sdk/ .
+#svn co http://10.76.1.125:8080/svn/geo_sim_sdk/ .
+#svn up
+git clone https://github.com/tfjiang/zju_geo_sim_sdk/ .
 
 #########################################################
 #### begin to install zju libraries #####################
@@ -31,6 +33,7 @@ cd 3rd/modification
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_CXX_FLAGS=-fPIC -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX ..
+
 for dir in alglib ann HLBFGS laspack liblbfgs mesquite-2.2.0 qp verdict
 do
     cd $dir
